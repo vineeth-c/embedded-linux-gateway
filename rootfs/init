@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "Starting Embedded Linux Gateway..."
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+
+echo "Root filesystem initialized."
+echo "Starting BusyBox shell..."
+
+exec /bin/sh

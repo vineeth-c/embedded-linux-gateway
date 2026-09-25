@@ -29,3 +29,14 @@ tmp/
 # Cross-compilation exercise executables
 /phase1/cross-compilation/hello_native
 /phase1/cross-compilation/hello_arm64
+
+# Downloaded BusyBox source
+/phase1/rootfs/busybox-1.36.1/
+
+# Generated root filesystem and initramfs
+/phase1/rootfs/rootfs-image/
+/phase1/rootfs/*.cpio
+/phase1/rootfs/*.cpio.gz
+
+# Downloaded source archives
+/phase1/rootfs/*.tar.bz2
