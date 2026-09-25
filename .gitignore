@@ -1,0 +1,31 @@
+# Downloaded upstream source trees
+/phase1/boot-process/u-boot/
+/phase1/linux-kernel/linux/
+
+# Generated binaries and build artifacts
+*.o
+*.a
+*.so
+*.ko
+*.cmd
+*.mod
+*.mod.c
+*.dtb
+*.dtbo
+*.elf
+*.bin
+*.img
+*.log
+
+# Build directories
+build/
+out/
+tmp/
+
+# Editor and OS files
+.vscode/
+.DS_Store
+
+# Cross-compilation exercise executables
+/phase1/cross-compilation/hello_native
+/phase1/cross-compilation/hello_arm64
