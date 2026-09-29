@@ -40,3 +40,6 @@ tmp/
 
 # Downloaded source archives
 /phase1/rootfs/*.tar.bz2
+
+# Generated U-Boot boot files
+/phase1/boot-process/boot-files/
