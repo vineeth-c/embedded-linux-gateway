@@ -92,9 +92,28 @@ console=ttyAMA0 rdinit=/init
 To exit QEMU, press Ctrl+A, release both keys,
 then press X.
 
-## Current limitations
+## Automatic boot with boot.scr
 
-This milestone uses manual U-Boot commands and a
-QEMU-generated Device Tree. Automatic boot configuration,
-persistent storage and production boot management are
-not yet implemented.
+The U-boot boot sequence is automated using `boot/boot.cmd`.
+
+Generate the U-Boot script image:
+
+```bash
+mkimage \
+ -A arm64 \
+ -T script \
+ -C none \
+ -n "Embedded Linux Gateway Boot" \
+ -d boot/boot.cmd \
+ boot/boot.scr
+```
+
+copy the generated script to the virtual boot disk:
+```bash
+cp boot/boot.scr phase1/boot-process/boot-files/
+```
+
+Then launch the system using:
+```bash
+./scripts/run-uboot.sh
+```

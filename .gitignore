@@ -43,3 +43,5 @@ tmp/
 
 # Generated U-Boot boot files
 /phase1/boot-process/boot-files/
+/boot/boot.scr
+!/boot/boot.cmd
